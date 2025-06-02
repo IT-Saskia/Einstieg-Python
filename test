@@ -1,0 +1,52 @@
+Hier ist ein einfaches Beispiel für Python-Code, der auf GitHub hochgeladen werden könnte. Es handelt sich um ein Skript, das eine grundlegende Funktionalität demonstriert – in diesem Fall das Berechnen der Fibonacci-Zahlen:
+
+Code kopieren
+# fibonacci.py
+
+def fibonacci(n):
+    """
+    Berechnet die Fibonacci-Zahlen bis zur n-ten Position.
+    :param n: Die Anzahl der Fibonacci-Zahlen, die berechnet werden sollen.
+    :return: Eine Liste der Fibonacci-Zahlen.
+    """
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
+    
+    fib_sequence = [0, 1]
+    for i in range(2, n):
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+    return fib_sequence
+
+if __name__ == "__main__":
+    try:
+        n = int(input("Geben Sie die Anzahl der Fibonacci-Zahlen ein: "))
+        print(f"Die ersten {n} Fibonacci-Zahlen sind: {fibonacci(n)}")
+    except ValueError:
+        print("Bitte geben Sie eine gültige Zahl ein.")
+
+Schritte zum Hochladen auf GitHub:
+Repository erstellen: Gehe zu GitHub, erstelle ein neues Repository und gib ihm einen Namen (z. B. fibonacci-calculator).
+Code hinzufügen:
+Initialisiere ein Git-Repository in deinem Projektordner:
+Code kopieren
+git init
+
+Füge die Datei hinzu und committe sie:
+Code kopieren
+git add fibonacci.py
+git commit -m "Initial commit: Fibonacci calculator"
+
+Verknüpfe das lokale Repository mit dem GitHub-Repository:
+Code kopieren
+git remote add origin <URL_deines_Repositories>
+
+Lade den Code hoch:
+Code kopieren
+git push -u origin main
+
+
+
